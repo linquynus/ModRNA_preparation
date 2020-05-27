@@ -1,0 +1,3 @@
+annotatePeaks.pl all_genomic_loci.bed hg19 > annotation_of_all_genomic_loci.txt
+
+paste <(cut -f 1,10,16 annotation_of_all_genomic_loci.txt) <(cut -f 8 annotation_of_all_genomic_loci.txt | cut -d "(" -f 1)  > annotation_of_all_genomic_loci_simplified.txt
